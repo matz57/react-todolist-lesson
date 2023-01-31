@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import { useState } from 'react';
-import { Button, Input, Select, List, Row, Col, Divider, Empty } from 'antd';
+import { Button, Input, Select, List, Row, Col, Divider} from 'antd';
 
 let nextId = 0;
 
@@ -22,10 +22,6 @@ const TodoListWithDesign = () => {
     const handleSelect = (newValue: string) => {
         setState(newValue);
     }
-
-    const handleDelete = ((id: any) => {
-        
-    })
     
     return (
         <div className='TodoListWithDesign' style={{ position: "absolute" }}>
