@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Input, Select, List, Row, Col, Divider} from 'antd';
+import { Button, Input, Row, Col, Divider} from 'antd';
 
 let nextId = 0;
 

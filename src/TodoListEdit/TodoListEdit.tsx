@@ -3,17 +3,18 @@ import { useState } from 'react';
 import { Button, Input, Select, List, Row, Col, Divider} from 'antd';
 import AddColumn from './AddColumn';
 import AddItem from './AddItem';
+import Column from './Column';
 
     const TodoListEdit = () => {
     const [listCategories, setListCategories]: any = useState([]);
     const [listItems, setListItems]: any = useState([]);
 
 
-    const handleOnClickNewColumn = (newColumn : any) => {
+    const handleOnClickNewColumn = (newColumn : []) => {
         setListCategories([...listCategories, newColumn]);
     }
 
-    const handleOnClickNewItem = (newItem : any) => {
+    const handleOnClickNewItem = (newItem : []) => {
         setListItems([...listItems, newItem]);
     }
     
@@ -23,17 +24,7 @@ import AddItem from './AddItem';
             <div style={{ margin: "20px" }}>
             <AddColumn listCol={handleOnClickNewColumn}></AddColumn>
                 <AddItem listCat={listCategories} listItem={handleOnClickNewItem}></AddItem>
-                { listCategories.map((categorie: any) => (
-                        <ul><li><h1 style={{fontSize: '25px', marginTop: '20px'}}>{categorie.col}</h1></li>
-                        { 
-                        listItems.filter((list: any) => list.idcat === categorie.id).map((filtered: any) =>( 
-                            <li style={{margin: '10px'}}>{filtered.item} <Button onClick={() => {
-                                const NewListItems = listItems.filter((item: any) => item.id !== filtered.id);
-                                setListItems(NewListItems);
-                            }}>X</Button></li>
-                        ))}</ul>
-                )
-                )}
+                <Column listCat={listCategories} listItem={listItems} handleItem={handleOnClickNewItem} ></Column>
                 
             </div>
         </div>
