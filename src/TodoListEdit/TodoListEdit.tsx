@@ -12,9 +12,8 @@ import ColumnModal from './ColumnModal';
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [idEditColumn, setIdEditColumn] = useState();
 
-    const showModal = (IdColumn: any) => {
+    const showModal = () => {
         setIsModalOpen(true);
-        setIdEditColumn(IdColumn);
       };
 
       const handleOkColumn = () => {

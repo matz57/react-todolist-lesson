@@ -10,7 +10,7 @@ return(
         const NewListCol = listCol.filter((item: any) => item.id !== Col.id);
         handleCol(NewListCol)
     }}>X</Button>
-    <Button type="primary" onClick={showMod(Col.id)}>
+    <Button type="primary" onClick={showMod}>
         Edit
     </Button>
     </li>
