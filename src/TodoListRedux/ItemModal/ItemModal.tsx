@@ -35,7 +35,7 @@ const ItemModal = () => {
 	}
 
     return <Modal
-        title={"Changer la data de " + item.name}
+        title={"Modification du nom de l'item : " + item.name}
         open={itemModalVisible}
         onOk={handleModalOnOk}
         onCancel={handleModalOnCancel}

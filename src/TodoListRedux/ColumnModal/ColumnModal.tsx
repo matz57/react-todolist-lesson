@@ -31,7 +31,7 @@ const ColumnModal = () => {
 	}
 
 	return <Modal
-		title={"Modification du nom de " + column.name}
+		title={"Modification du nom de la colonne : " + column.name}
 		open={columnModalVisible}
 		onOk={handleModalOnOK}
 		onCancel={handleModalOnCancel}
