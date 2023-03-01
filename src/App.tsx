@@ -5,6 +5,7 @@ import TodoListBasic from './TodoListBasic';
 import TodoListEdit from './TodoListEdit';
 import TodoListWithDesign from './TodoListWithDesign';
 import TodoListRedux from './TodoListRedux';
+import Example from './Example/Example';
 
 const App = () => (
     <div className="app">
@@ -15,6 +16,7 @@ const App = () => (
             <Route path="/todo-list-edit" element={<TodoListEdit />} />
             <Route path="/todo-list-redux" element={<TodoListRedux />} />
             <Route path="*" element={<Navigate to="/todo-list-basic" />} />
+            <Route path="example" element={<Example/>} />
         </Routes>
     </div>
 );
